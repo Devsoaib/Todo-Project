@@ -1,0 +1,413 @@
+{
+	"info": {
+		"_postman_id": "7d46e6e5-54d5-4c53-a325-557cf7bce7b1",
+		"name": "TODO PROJECT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24396864"
+	},
+	"item": [
+		{
+			"name": "usersRoute",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/register",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "sabila",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "sabila123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Select Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYmIwOTM4YWJjZjNiY2Y2Mzg2NmM4MSIsImVtYWlsIjoibW9oYW1tYWRAZ21haWwuY29tIiwidXNlcm5hbWUiOiJtb2hhbW1hZCIsImlhdCI6MTY3MzIwMjAzOSwiZXhwIjoxNjczMjA1NjM5fQ.JP9SO219vkUQH-sEnj6SHOhI7UQGlgIwfKHJ84UUS_w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "mohammad",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "mohammad",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/profile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProfile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYmIxMTZhZjc2YjM0NjAwMmFjZjg3NSIsImVtYWlsIjoic2FiaWxhQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoic2FiaWxhIiwiaWF0IjoxNjczMjA0MDk3LCJleHAiOjE2NzMyMDc2OTd9.yfJpTinPfPwvyZE71HzRxfqqCcqywAF-eg9dxZidwpI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "sabila123@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "sabila123",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "ahmed",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/updateProfile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "todoRoute",
+			"item": [
+				{
+					"name": "createTodo",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "selectTodo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYmIxMTZhZjc2YjM0NjAwMmFjZjg3NSIsImVtYWlsIjoic2FiaWxhQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoic2FiaWxhIiwiaWF0IjoxNjczMjA0MDk3LCJleHAiOjE2NzMyMDc2OTd9.yfJpTinPfPwvyZE71HzRxfqqCcqywAF-eg9dxZidwpI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/selectTodo",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"selectTodo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTodo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYmIxMTZhZjc2YjM0NjAwMmFjZjg3NSIsImVtYWlsIjoic2FiaWxhMTIzQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoic2FiaWxhIiwiaWF0IjoxNjczMzQyODQ4LCJleHAiOjE2NzMzNDY0NDh9.GWfXtLKFTCS9ZrDci9_9pW5By1vw81Tn_oldjblO6yk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "63bb0ff7abcf3bcf63866c87",
+									"type": "text"
+								},
+								{
+									"key": "todoTitle",
+									"value": "mohammad's todo",
+									"type": "text"
+								},
+								{
+									"key": "todoDescription",
+									"value": "mohammad's description",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/updateTodo",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"updateTodo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatusTodo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYmIxMTZhZjc2YjM0NjAwMmFjZjg3NSIsImVtYWlsIjoic2FiaWxhMTIzQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoic2FiaWxhIiwiaWF0IjoxNjczMzQzNzQzLCJleHAiOjE2NzMzNDczNDN9.r3eCZku0x7GOoityM6JZq9LZpLkIhQ-PlJzE9--pO5E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "63bb0ff7abcf3bcf63866c87",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "canceled",
+									"type": "text"
+								},
+								{
+									"key": "todoTitle",
+									"value": "matro dilam",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/updateStatusTodo",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"updateStatusTodo"
+							],
+							"query": [
+								{
+									"key": "_id",
+									"value": "63bb19c2da8f2bfee8a951c6",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "completed",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTodo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYmIxMTZhZjc2YjM0NjAwMmFjZjg3NSIsImVtYWlsIjoic2FiaWxhMTIzQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoic2FiaWxhIiwiaWF0IjoxNjczNDE1NzQ1LCJleHAiOjE2NzM0MTkzNDV9.oE0dIYKRvRUX8Aquzy_dTXBYzTNPAYzogbEGpSbq-rk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"63bb126cf76b346002acf87b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/deleteTodo",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"deleteTodo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "selectTodoByStatus",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYmIxMTZhZjc2YjM0NjAwMmFjZjg3NSIsImVtYWlsIjoic2FiaWxhMTIzQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoic2FiaWxhIiwiaWF0IjoxNjczNDE4NzU2LCJleHAiOjE2NzM0MjIzNTZ9.j7oTbbdSG_Xe4rCLSDMvKRSse6w9LS0YfFtdVpy-NNU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "updated",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/selectTodoByStatus",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"selectTodoByStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "selectTodoByDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYmIxMTZhZjc2YjM0NjAwMmFjZjg3NSIsImVtYWlsIjoic2FiaWxhMTIzQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoic2FiaWxhIiwiaWF0IjoxNjczNDMwMTY5LCJleHAiOjE2NzM0MzM3Njl9.eh2NZYScLOtQ8WHrQ5CoEk9_j9Ll1L9fe4wvRkj2QzI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fromDate\": \"2023-01-06\",\r\n    \"toDate\": \"2023-01-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/selectTodoByDate",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"selectTodoByDate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:5000/v1/",
+			"type": "string"
+		}
+	]
+}
